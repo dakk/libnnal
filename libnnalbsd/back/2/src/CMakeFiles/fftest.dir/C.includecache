@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dak/libneuralnetwork/src/feedfoward.c
+feedfoward.h
+-
+malloc.h
+-
+mathf.h
+-
+pthread.h
+-
+
+include/feedfoward.h
+math.h
+-
+mathf.h
+-
+
+include/mathf.h
+math.h
+-
+

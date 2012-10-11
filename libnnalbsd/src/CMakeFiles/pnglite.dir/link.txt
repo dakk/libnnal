@@ -1,0 +1,2 @@
+/usr/bin/ar cr libpnglite.a  CMakeFiles/pnglite.dir/pnglite.c.o
+/usr/bin/ranlib libpnglite.a

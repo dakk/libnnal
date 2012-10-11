@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/../bin/mlpgtk.dir/mlpgtk/mlpgtk.c.o CMakeFiles/../bin/mlpgtk.dir/mlpgtk/new_net.c.o  -o ../bin/mlpgtk -rdynamic /usr/local/lib/libgtk-x11-2.0.so libneuralnetwork.a -lm libgtkmlpwidget.a -Wl,-rpath,/usr/local/lib 

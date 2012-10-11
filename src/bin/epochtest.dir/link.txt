@@ -1,0 +1,1 @@
+/usr/bin/gcc      CMakeFiles/../bin/epochtest.dir/test/epochtest.c.o  -o ../bin/epochtest -rdynamic libneuralnetwork.a -lm 

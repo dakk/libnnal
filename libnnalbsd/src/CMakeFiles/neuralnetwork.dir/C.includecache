@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dak/libnnal/src/pnglite.c
+zlib.h
+/home/dak/libnnal/src/zlib.h
+zlite.h
+/home/dak/libnnal/src/zlite.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+pnglite.h
+/home/dak/libnnal/src/pnglite.h
+
+include/pnglite.h
+stdlib.h
+-
+

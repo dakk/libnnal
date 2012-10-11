@@ -1,0 +1,1 @@
+/usr/bin/gcc    -fPIC CMakeFiles/patterntest.dir/patterntest.c.o  -o patterntest -rdynamic libneuralnetwork.a -lm 

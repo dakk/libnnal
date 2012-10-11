@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/../bin/bptimetest.dir/test/bptimetest.c.o  -o ../bin/bptimetest -rdynamic libneuralnetwork.a -lm 

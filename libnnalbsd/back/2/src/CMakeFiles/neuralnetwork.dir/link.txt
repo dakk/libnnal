@@ -1,0 +1,2 @@
+/usr/bin/ar cr libneuralnetwork.a  CMakeFiles/neuralnetwork.dir/mlp.c.o CMakeFiles/neuralnetwork.dir/pattern_recognition.c.o CMakeFiles/neuralnetwork.dir/fuzzy.c.o CMakeFiles/neuralnetwork.dir/mathf.c.o
+/usr/bin/ranlib libneuralnetwork.a

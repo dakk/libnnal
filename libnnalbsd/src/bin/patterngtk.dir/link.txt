@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/../bin/patterngtk.dir/patterngtk/patterngtk.c.o  -o ../bin/patterngtk -rdynamic libpnglite.a -lz /usr/local/lib/libgtk-x11-2.0.so libneuralnetwork.a -lm libgtkmlpwidget.a -Wl,-rpath,/usr/local/lib 

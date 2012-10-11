@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dak/Projects/libnnal/src/test/fuzzytest.c
+fuzzy.h
+-
+stdlib.h
+-
+malloc.h
+-
+time.h
+-
+string.h
+-
+mathf.h
+-
+
+include/config.h
+
+include/fuzzy.h
+
+include/mathf.h
+math.h
+-
+config.h
+-
+

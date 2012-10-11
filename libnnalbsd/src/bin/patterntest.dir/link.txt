@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/../bin/patterntest.dir/test/patterntest.c.o  -o ../bin/patterntest -rdynamic -lz libneuralnetwork.a -lm libpnglite.a 

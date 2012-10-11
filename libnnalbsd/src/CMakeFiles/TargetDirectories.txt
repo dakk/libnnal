@@ -1,0 +1,11 @@
+/home/dak/libnnal/src/CMakeFiles/../bin/bptimetest.dir
+/home/dak/libnnal/src/CMakeFiles/../bin/epochtest.dir
+/home/dak/libnnal/src/CMakeFiles/../bin/fuzzytest.dir
+/home/dak/libnnal/src/CMakeFiles/../bin/gtkmlptest.dir
+/home/dak/libnnal/src/CMakeFiles/../bin/mlpgtk.dir
+/home/dak/libnnal/src/CMakeFiles/../bin/mlptest.dir
+/home/dak/libnnal/src/CMakeFiles/../bin/patterngtk.dir
+/home/dak/libnnal/src/CMakeFiles/../bin/patterntest.dir
+/home/dak/libnnal/src/CMakeFiles/gtkmlpwidget.dir
+/home/dak/libnnal/src/CMakeFiles/neuralnetwork.dir
+/home/dak/libnnal/src/CMakeFiles/pnglite.dir

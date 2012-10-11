@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dak/Projects/libnnal/src/test/patterntest.c
+pattern_recognition.h
+-
+mlp.h
+-
+math.h
+-
+stdio.h
+-
+malloc.h
+-
+dirent.h
+-
+sys/types.h
+-
+string.h
+-
+
+include/config.h
+
+include/mathf.h
+math.h
+-
+config.h
+-
+
+include/mlp.h
+math.h
+-
+mathf.h
+-
+
+include/pattern_recognition.h
+mlp.h
+include/mlp.h
+

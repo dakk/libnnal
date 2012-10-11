@@ -1,0 +1,23 @@
+\select@language {italian}
+\contentsline {chapter}{\numberline {1}Introduzione}{9}
+\contentsline {section}{\numberline {1.1}Licenza}{9}
+\contentsline {section}{\numberline {1.2}Strumenti software}{9}
+\contentsline {section}{\numberline {1.3}\textlatin {\LaTeX }}{10}
+\contentsline {chapter}{\numberline {2}Reti neurali}{11}
+\contentsline {section}{\numberline {2.1}Reti neurali biologiche}{11}
+\contentsline {subsection}{\numberline {2.1.1}Trasmissione delle informazioni tra neuroni}{12}
+\contentsline {section}{\numberline {2.2}Reti neurali artificiali}{12}
+\contentsline {subsection}{\numberline {2.2.1}Storia}{12}
+\contentsline {subsection}{\numberline {2.2.2}Tipi di rete}{12}
+\contentsline {subsubsection}{Multi Layered Perceptons}{13}
+\contentsline {subsubsection}{Self Organization Map}{13}
+\contentsline {subsubsection}{Hopefield}{13}
+\contentsline {subsection}{\numberline {2.2.3}Apprendimento}{13}
+\contentsline {chapter}{\numberline {3}Reti MLP e apprendimento supervisionato}{15}
+\contentsline {section}{\numberline {3.1}Elenco dei simboli}{15}
+\contentsline {section}{\numberline {3.2}Back Propagation}{15}
+\contentsline {section}{\numberline {3.3}Pattern Recognition mediante rete neurali}{16}
+\contentsline {subsection}{\numberline {3.3.1}Applicazioni software}{16}
+\contentsline {chapter}{\numberline {4}Reti SOM e apprendimento senza supervisione}{19}
+\contentsline {section}{\numberline {4.1}Apprendimento auto-organizzato}{19}
+\contentsline {chapter}{\numberline {5}Bibliografia}{21}

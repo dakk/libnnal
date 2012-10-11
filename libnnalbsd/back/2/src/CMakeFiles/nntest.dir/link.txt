@@ -1,0 +1,1 @@
+/usr/bin/gcc    -fPIC CMakeFiles/nntest.dir/neuralnetwork.c.o  -o nntest -rdynamic 

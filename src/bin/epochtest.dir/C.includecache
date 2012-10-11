@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dak/Projects/libnnal/src/test/epochtest.c
+mlp.h
+-
+malloc.h
+-
+mathf.h
+-
+pthread.h
+-
+
+include/config.h
+
+include/mathf.h
+math.h
+-
+config.h
+-
+
+include/mlp.h
+math.h
+-
+mathf.h
+-
+

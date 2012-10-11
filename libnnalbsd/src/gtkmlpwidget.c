@@ -1,0 +1,206 @@
+/**
+ * A scalable gtk widget to show and train neural network mlp
+ * 
+ * \file gtkmlpwidget.c
+ * \author Davide Gessa
+ */
+/*
+ *     libnnal
+ *     Copyright (C) 2010 Davide Gessa
+ * 
+ * 	This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include <gtkmlpwidget.h>
+
+G_DEFINE_TYPE (GtkMlp, gtk_mlp, GTK_TYPE_DRAWING_AREA);
+
+
+/* Class init */
+static void
+gtk_mlp_class_init(GtkMlpClass *class)
+{
+	GtkWidgetClass *widget_class;
+	widget_class = GTK_WIDGET_CLASS (class);
+	widget_class->expose_event = gtk_mlp_expose;
+}
+
+
+
+/* Init */
+static void
+gtk_mlp_init(GtkMlp *clock)
+{
+
+}
+
+
+
+
+/* Draw the network */
+void 
+__gtk_mlp_draw(GtkWidget *gmlp, cairo_t *cr)
+{
+	int x;
+	int y;
+	int radius;
+	int i;
+	int j;
+	int k;
+	int layer_spacing;
+	mlp_neural_network_t *n = (GTK_MLP(gmlp)->network);
+	int nlmax;
+	double gr = 0.4;
+	
+	// Find max dimension of a layer
+	if((n->hidden_n >= n->input_n) && (n->hidden_n >= n->output_n))
+		nlmax = n->hidden_n;
+	else if((n->output_n >= n->input_n) && (n->output_n >= n->hidden_n))
+		nlmax = n->output_n;
+	else if((n->input_n >= n->hidden_n) && (n->input_n >= n->output_n))
+		nlmax = n->input_n;
+	
+	if(nlmax > 100)
+		gr = 0.015;
+		
+	// Calculate the radius of each neuron
+	radius = (gmlp->allocation.height - 100) / nlmax / 2;
+	if(radius > 40)
+		radius = 40;
+	if(radius == 0)	
+		radius = 1;
+	
+	layer_spacing = (gmlp->allocation.width - 100) / 2;
+
+	if(((layer_spacing - 10)/2) < radius)
+		radius = (layer_spacing - 10) /2;
+	
+	
+
+	for(j = 2; j >= 0; j--)
+	{
+		int max, max_prev;
+		mlp_neuron_t *layer_c;
+		switch(j)
+		{
+			case 0:
+				layer_c = n->input;
+				max = n->input_n;
+				max_prev = 0;
+				break;
+			case 1:
+				layer_c = n->hidden;
+				max = n->hidden_n;
+				max_prev = n->input_n;
+				break;
+			case 2:
+				layer_c = n->output;
+				max = n->output_n;
+				max_prev = n->hidden_n;
+				break;
+		}
+		
+		
+		for(i = max - 1; i >= 0; i--)
+		{
+			cairo_set_line_width(cr, gr);
+					
+			x = 50  + j * layer_spacing;
+			y = i * radius * 2.5 + 50;
+					
+			for(k = 0; k < max_prev; k++)
+			{
+				double color = layer_c->weights[k];
+				cairo_set_source_rgb(cr, color, 0.0, 0.0);
+				cairo_move_to(cr, x, y);
+				
+				int xc = 50  + (j-1) * layer_spacing;
+				int yc = k * radius * 2.5 + 50;
+				cairo_line_to(cr, xc, yc);
+				cairo_stroke(cr);
+			}
+		
+			cairo_set_line_width(cr, 0.8);
+			cairo_arc (cr, x, y, radius, 0, 2 * M_PI);
+			cairo_set_source_rgb (cr, 1, 1, 1);
+			cairo_fill_preserve (cr);
+			cairo_set_source_rgb (cr, 0, 0, 0);
+			cairo_stroke (cr);		
+		}
+		
+	}
+}
+
+
+
+/* Expose */
+static gboolean
+gtk_mlp_expose (GtkWidget *gmlp, GdkEventExpose *event)
+{
+	cairo_t *cr = (cairo_t *) gdk_cairo_create (gmlp->window);
+	
+	
+	// Rectangle where I'll draw the network
+	cairo_rectangle (cr,
+		event->area.x, event->area.y,
+		event->area.width, event->area.height);
+
+
+	// Clip, draw, show and destroy all
+	cairo_clip (cr);
+	if(GTK_MLP(gmlp)->network != NULL)
+		__gtk_mlp_draw(gmlp, cr);
+	cairo_destroy (cr);
+
+	return FALSE;
+}
+
+
+
+
+/**
+ * Set the widget neural network
+ */
+void 
+gtk_mlp_set_network(GtkMlp *m, mlp_neural_network_t *n)
+{
+	m->network = n;
+}
+
+
+
+
+
+/**
+ * Create new gtk_mlp widget
+ */
+GtkWidget *
+gtk_mlp_new (void)
+{
+	GtkWidget *w = (GtkWidget *) g_object_new(GTK_TYPE_MLP, NULL);
+	GTK_MLP(w)->network = NULL;
+	return w;
+}
+
+
+
+
+/**
+ * Get the widget neural network
+ */
+mlp_neural_network_t *
+gtk_mlp_get_network(GtkMlp *m)
+{
+	return m->network;
+}

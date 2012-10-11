@@ -1,0 +1,1 @@
+/usr/bin/gcc    -fPIC CMakeFiles/../bin/fuzzytest.dir/fuzzytest.c.o  -o ../bin/fuzzytest -rdynamic libneuralnetwork.a -lm 

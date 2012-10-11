@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dak/Projects/libnnal/src/test/md5mlp.c
+mlp.h
+-
+string.h
+-
+malloc.h
+-
+mathf.h
+-
+pthread.h
+-
+math.h
+-
+openssl/md5.h
+-
+
+include/config.h
+
+include/mathf.h
+math.h
+-
+config.h
+-
+
+include/mlp.h
+math.h
+-
+mathf.h
+-
+
