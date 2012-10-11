@@ -1,1 +1,0 @@
-/usr/bin/gcc    -fPIC CMakeFiles/mlptest.dir/mlptest.c.o  -o mlptest -rdynamic libneuralnetwork.a -lm 

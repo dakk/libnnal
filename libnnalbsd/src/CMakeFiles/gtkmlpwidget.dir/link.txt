@@ -1,2 +1,0 @@
-/usr/bin/ar cr libgtkmlpwidget.a  CMakeFiles/gtkmlpwidget.dir/gtkmlpwidget.c.o
-/usr/bin/ranlib libgtkmlpwidget.a

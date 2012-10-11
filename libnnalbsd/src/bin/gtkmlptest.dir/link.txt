@@ -1,1 +1,0 @@
-/usr/bin/gcc     CMakeFiles/../bin/gtkmlptest.dir/test/gtkmlptest.c.o  -o ../bin/gtkmlptest -rdynamic libpnglite.a libgtkmlpwidget.a -lz /usr/local/lib/libcairo.so /usr/local/lib/libgtk-x11-2.0.so libneuralnetwork.a -lm -Wl,-rpath,/usr/local/lib 

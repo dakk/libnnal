@@ -1,1 +1,0 @@
-/usr/bin/gcc     CMakeFiles/../bin/md5mlp.dir/test/md5mlp.c.o  -o ../bin/md5mlp -rdynamic -lssl -lcrypto -ldl -lz libneuralnetwork.a -lm 

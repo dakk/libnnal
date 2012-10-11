@@ -1,2 +1,0 @@
-/usr/bin/ar cr liblibnn.a  CMakeFiles/libnn.dir/lnn.c.o
-/usr/bin/ranlib liblibnn.a

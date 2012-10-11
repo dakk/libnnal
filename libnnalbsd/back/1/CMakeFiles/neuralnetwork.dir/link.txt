@@ -1,2 +1,0 @@
-/usr/bin/ar cr libneuralnetwork.a  CMakeFiles/neuralnetwork.dir/neuralnetwork.c.o
-/usr/bin/ranlib libneuralnetwork.a

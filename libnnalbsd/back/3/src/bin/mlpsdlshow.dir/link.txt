@@ -1,1 +1,0 @@
-/usr/bin/gcc    -fPIC CMakeFiles/../bin/mlpsdlshow.dir/mlpsdlshow/main.c.o CMakeFiles/../bin/mlpsdlshow.dir/mlpsdlshow/sdl_render.c.o  -o ../bin/mlpsdlshow -rdynamic libneuralnetwork.a -lm -lSDL -lSDL_ttf 

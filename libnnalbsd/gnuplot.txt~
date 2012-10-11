@@ -1,7 +1,0 @@
-set ylabel "Delta error"
-set xlabel "Epoch number"
-set title "Delta error in a pattern recognition test with 22 characters"
-set autoscale
-set term png
-set output "epoch_pattern.png"
-plot "epoch_test.txt" with lines title "Error"
