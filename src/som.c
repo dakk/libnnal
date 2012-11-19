@@ -135,3 +135,4 @@ double som_train(som_neural_network_t *som, double *in)
 {
 	return 0.0;
 }
+
